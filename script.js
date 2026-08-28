@@ -1,8 +1,36 @@
-// ===== CONTACT FORM =====
+// ===== КОНФИГУРАЦИЯ ТЕЛЕГРАМ =====
+const TELEGRAM_BOT_TOKEN = '8959451874:AAGy9-bOvsu_M3I5ytoHWgpUGnsk_l7-HQk';
+const TELEGRAM_CHAT_ID = '6505251564';
+
+// ===== ФУНКЦИЯ ОТПРАВКИ В ТЕЛЕГРАМ =====
+async function sendToTelegram(formData) {
+    const message = `
+🎬 *Новая заявка с сайта FilmPal!*
+
+👤 *Имя:* ${formData.name}
+📱 *Контакт:* ${formData.contact}
+📦 *Пакет:* ${formData.package}
+📝 *Сообщение:* ${formData.message || 'Не указано'}
+⏰ *Время:* ${new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Almaty' })}
+    `.trim();
+
+    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data.ok;
+    } catch (error) {
+        console.error('Ошибка отправки:', error);
+        return false;
+    }
+}
+
+// ===== КОНТАКТНАЯ ФОРМА =====
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
 
         const formData = {
@@ -13,25 +41,33 @@ if (contactForm) {
             timestamp: new Date().toISOString()
         };
 
-        // Сохраняем в localStorage (для демо)
-        const leads = JSON.parse(localStorage.getItem('filmpal_leads') || '[]');
-        leads.push(formData);
-        localStorage.setItem('filmpal_leads', JSON.stringify(leads));
+        // Показываем индикатор загрузки
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Отправка...';
+        submitBtn.disabled = true;
 
-        // Показываем успех
-        const form = e.target;
-        form.innerHTML = `
-            <div style="text-align: center; padding: 40px 20px;">
-                <div style="font-size: 4rem; margin-bottom: 16px;">🎉</div>
-                <h3 style="margin-bottom: 12px;">Спасибо за заявку!</h3>
-                <p style="color: var(--gray);">Мы свяжемся с вами в течение часа.</p>
-                <p style="color: var(--gray); font-size: 0.9rem; margin-top: 16px;">
-                    Номер заявки: #${Math.floor(Math.random() * 10000)}
-                </p>
-            </div>
-        `;
+        // Отправляем в Telegram
+        const sent = await sendToTelegram(formData);
 
-        console.log('Новая заявка:', formData);
+        // Показываем результат
+        if (sent) {
+            contactForm.innerHTML = `
+                <div style="text-align: center; padding: 40px 20px;">
+                    <div style="font-size: 4rem; margin-bottom: 16px;">🎉</div>
+                    <h3 style="margin-bottom: 12px;">Заявка отправлена!</h3>
+                    <p style="color: var(--gray);">Мы свяжемся с вами в течение часа.</p>
+                    <p style="color: var(--gray); font-size: 0.9rem; margin-top: 16px;">
+                        Номер заявки: #${Math.floor(Math.random() * 10000)}
+                    </p>
+                </div>
+            `;
+        } else {
+            // Если не удалось отправить в Telegram
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            alert('Ошибка отправки. Попробуйте связаться с нами через WhatsApp или Telegram напрямую.');
+        }
     });
 }
 
@@ -49,7 +85,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== CALCULATOR =====
+// ===== КАЛЬКУЛЯТОР =====
 const BASE_PRICE = 200;
 
 const PRICES = {
@@ -91,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCalculator();
 });
 
-// ===== FAQ ACCORDION =====
+// ===== FAQ АККОРДЕОН =====
 document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq-item');
 
@@ -115,12 +151,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// ===== VIDEO PLACEHOLDER =====
+// ===== ВИДЕО ПЛЕЙСХОЛДЕР =====
 document.addEventListener('DOMContentLoaded', function() {
     const videoPlaceholder = document.querySelector('.video-placeholder');
     if (videoPlaceholder) {
         videoPlaceholder.addEventListener('click', () => {
-            // Здесь можно встроить реальное видео
             videoPlaceholder.innerHTML = `
                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                         style="border:0;border-radius:24px;" allowfullscreen></iframe>
@@ -129,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ===== ANIMATIONS ON SCROLL =====
+// ===== АНИМАЦИИ ПРИ СКРОЛЛЕ =====
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
