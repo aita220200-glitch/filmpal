@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmPal — Умный Telegram-бот для рекомендаций фильмов | От $150</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🎬 FilmPal</div>
+            <a href="#contact" class="nav-cta">Заказать бота</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-badge">🚀 1 день до запуска</span>
+            <h1 class="hero-title">
+                Умный бот для рекомендаций<br>
+                <span class="gradient-text">фильмов и сериалов</span>
+            </h1>
+            <p class="hero-subtitle">
+                Telegram-бот, который подбирает фильмы по жанрам, рейтингам и предпочтениям.
+                Как Netflix, но для твоего канала.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Заказать за $200</a>
+                <a href="#features" class="btn btn-secondary">Узнать больше ↓</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">фильмов в базе</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">10x</div>
+                    <div class="stat-label">экономия времени</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">работает без перерывов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Что умеет бот</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Рекомендации по жанрам</h3>
+                    <p>Подборки по всем популярным жанрам: от ужасов до романтики. Бот знает 19+ категорий.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Поиск по названию</h3>
+                    <p>Просто напиши название — бот найдёт фильм, сериал или аниме за секунду.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Рейтинги и обзоры</h3>
+                    <p>Полная информация: рейтинг, описание, год выпуска, количество оценок.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📺</div>
+                    <h3>Где посмотреть</h3>
+                    <p>Прямые ссылки на стриминговые платформы: Netflix, КиноПоиск, Okko.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎌</div>
+                    <h3>Аниме и сериалы</h3>
+                    <p>Отдельные подборки для аниме-каналов и сериалов. Бот знает всё!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Красивый дизайн</h3>
+                    <p>Постеры, описания, рейтинги — бот выглядит как премиум-сервис.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo">
+        <div class="container">
+            <h2 class="section-title">Как это выглядит</h2>
+            <div class="demo-content">
+                <div class="demo-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-avatar">🎬</div>
+                        <div>
+                            <div class="mockup-name">FilmPal Bot</div>
+                            <div class="mockup-status">в сети</div>
+                        </div>
+                    </div>
+                    <div class="mockup-messages">
+                        <div class="mockup-message bot">
+                            Привет! Я FilmPal 🍿<br>
+                            Помогу найти фильм или сериал по твоим предпочтениям.<br><br>
+                            Нажми /recommend для рекомендаций!
+                        </div>
+                        <div class="mockup-message user">
+                            /recommend
+                        </div>
+                        <div class="mockup-message bot">
+                            🎬 *Интерстеллар* (2014)<br>
+                            ⭐ 8.7/10 (15,234 голоса)<br>
+                            🔗 Interstellar<br><br>
+                            Когда засуха, пыльные бури и вымирание растений...
+                        </div>
+                        <div class="mockup-message user">
+                            Круто! Ещё?
+                        </div>
+                        <div class="mockup-message bot">
+                            🎬 *Начало* (2010)<br>
+                            ⭐ 8.8/10<br><br>
+                            Кобб — талантливый вор, специализирующийся...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <h2 class="section-title">Посмотрите видео</h2>
+            <div class="video-wrapper">
+                <div class="video-placeholder">
+                    <div class="play-button">▶</div>
+                    <p>Нажмите, чтобы посмотреть презентацию FilmPal</p>
+                </div>
+                <div class="video-info">
+                    <h3>🎬 FilmPal в действии</h3>
+                    <p>Узнайте за 2 минуты, как FilmPal может автоматизировать ваши рекомендации фильмов и сэкономить до 10 часов в неделю.</p>
+                    <div class="video-features">
+                        <div class="video-feature">✅ Поиск 50,000+ фильмов</div>
+                        <div class="video-feature">✅ Персональные рекомендации</div>
+                        <div class="video-feature">✅ Интеграция со стримингами</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <h2 class="section-title">🧮 Калькулятор стоимости</h2>
+            <p class="calc-subtitle">Выберите нужные опции и узнайте точную стоимость вашего бота</p>
+
+            <div class="calculator">
+                <div class="calc-group">
+                    <h4>📦 Базовые функции</h4>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" id="calc-search" checked disabled>
+                        <span class="checkmark"></span>
+                        Поиск по названию (включено бесплатно)
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" id="calc-genres">
+                        <span class="checkmark"></span>
+                        Рекомендации по жанрам (+$50)
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" id="calc-anime">
+                        <span class="checkmark"></span>
+                        Поддержка аниме (+$30)
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" id="calc-tv">
+                        <span class="checkmark"></span>
+                        Сериалы (+$30)
+                    </label>
+                </div>
+
+                <div class="calc-group">
+                    <h4>🎨 Кастомизация</h4>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" id="calc-brand">
+                        <span class="checkmark"></span>
+                        Ваш логотип и название (+$50)
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" id="calc-design">
+                        <span class="checkmark"></span>
+                        Премиум дизайн карточек (+$40)
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" id="calc-animation">
+                        <span class="checkmark"></span>
+                        Анимации и эффекты (+$30)
+                    </label>
+                </div>
+
+                <div class="calc-group">
+                    <h4>⚙️ Дополнительно</h4>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" id="calc-analytics">
+                        <span class="checkmark"></span>
+                        Аналитика и статистика (+$40)
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" id="calc-broadcast">
+                        <span class="checkmark"></span>
+                        Рассылки подписчикам (+$30)
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" id="calc-support">
+                        <span class="checkmark"></span>
+                        Расширенная поддержка 30 дней (+$50)
+                    </label>
+                </div>
+
+                <div class="calc-result">
+                    <div class="calc-total">
+                        <span>Итого:</span>
+                        <strong id="calc-price">$200</strong>
+                    </div>
+                    <p class="calc-note">Минимальная стоимость $200. Оплата 50/50.</p>
+                    <a href="#contact" class="btn btn-primary">Заказать по этой цене</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">⭐ Отзывы клиентов</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"FilmPal полностью изменил мой рабочий процесс! Теперь я трачу на подборку фильмов не 6 часов в неделю, а всего 15 минут. Окупился за первую неделю!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">АК</div>
+                        <div class="author-info">
+                            <strong>Алексей К.</strong>
+                            <span>Киноблогер • 15K подписчиков</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Клиенты нашего киноклуба просто в восторге! Бот работает 24/7, отвечает мгновенно и никогда не устаёт. Рекомендую всем владельцам кино-бизнеса."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">МС</div>
+                        <div class="author-info">
+                            <strong>Мария С.</strong>
+                            <span>Основатель киноклуба</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Заказал премиум-пакет за $350. Через 2 дня бот уже работал идеально. Тонкая настройка под мою аудиторию — просто вау! Отличные инвестиции."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ДП</div>
+                        <div class="author-info">
+                            <strong>Дмитрий П.</strong>
+                            <span>Telegram-канал «Аниме Daily»</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★☆</div>
+                    <p class="testimonial-text">"Нужен был бот для туристического агентства — нашли нестандартное применение для подборки фильмов по странам. Работает отлично, поддержка на высоте!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ЕВ</div>
+                        <div class="author-info">
+                            <strong>Елена В.</strong>
+                            <span>Менеджер турагентства</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">❓ Частые вопросы</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Сколько времени занимает запуск бота?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Стандартный запуск занимает <strong>1-2 дня</strong>. Базовый бот может быть готов уже через 4 часа после оплаты. Премиум и бизнес-версии — до 3-5 дней.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Нужен ли мне сервер для бота?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Для большинства клиентов мы используем <strong>бесплатные облачные решения</strong>. Если нужна повышенная нагрузка — поможем выбрать оптимальный VPS от $5/месяц.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Можно ли изменить бота после запуска?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да! В течение <strong>7 дней</strong> после сдачи — любые правки бесплатно. После — по договорённости, обычно $20-50 за изменение.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Как происходит оплата?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>50% аванс</strong> перед началом работы, <strong>50%</strong> после успешного тестирования и вашего одобрения. Принимаем: банковские карты, криптовалюта USDT, переводы.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Что если бот не понравится?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Мы уверены в качестве, поэтому даём <strong>гарантию возврата денег</strong>. Если в течение 7 дней после сдачи что-то не устроит — вернём 100% оплаты без вопросов.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Какие данные нужны для запуска?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Минимум: <strong>токен бота от @BotFather</strong>. Для премиума: ваш логотип, название, описание канала. Для бизнеса: техзадание и требования к интеграции.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Бот работает на русском языке?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да! Бот полностью на <strong>русском языке</strong>. Также поддерживает английский и другие языки по запросу.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Пакеты услуг</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-badge">Старт</div>
+                    <h3>Базовый</h3>
+                    <div class="pricing-price">$200</div>
+                    <p class="pricing-desc">Идеально для старта</p>
+                    <ul class="pricing-features">
+                        <li>✅ Бот с базовыми функциями</li>
+                        <li>✅ Поиск по названию</li>
+                        <li>✅ Рекомендации по жанрам</li>
+                        <li>✅ 50 000+ фильмов в базе</li>
+                        <li>✅ Инструкция по запуску</li>
+                        <li>✅ 7 дней поддержки</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Заказать</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge popular">Хит продаж</div>
+                    <h3>Премиум</h3>
+                    <div class="pricing-price">$350</div>
+                    <p class="pricing-desc">Полная кастомизация</p>
+                    <ul class="pricing-features">
+                        <li>✅ Всё из базового пакета</li>
+                        <li>✅ Кастомизация под бренд</li>
+                        <li>✅ Ваше название и логотип</li>
+                        <li>✅ Анимированные карточки</li>
+                        <li>✅ Персональные рекомендации</li>
+                        <li>✅ 30 дней поддержки</li>
+                        <li>✅ Видео-инструкция</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Заказать</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-badge">Бизнес</div>
+                    <h3>Бизнес</h3>
+                    <div class="pricing-price">$600</div>
+                    <p class="pricing-desc">Для компаний</p>
+                    <ul class="pricing-features">
+                        <li>✅ Всё из Премиум</li>
+                        <li>✅ Интеграция с CRM</li>
+                        <li>✅ Аналитика и отчёты</li>
+                        <li>✅ Рассылки</li>
+                        <li>✅ Мультиязычность</li>
+                        <li>✅ 90 дней поддержки</li>
+                        <li>✅ SLA с гарантией</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">⚡</div>
+                    <h3>Быстрый запуск</h3>
+                    <p>От заявки до работающего бота — 1 день. Не нужно ждать неделями.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">💰</div>
+                    <h3>Честные цены</h3>
+                    <p>Без скрытых платежей и доплат. 50% аванс, 50% после сдачи.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">🛡️</div>
+                    <h3>Гарантия</h3>
+                    <p>Бесплатные правки в течение 7 дней. Если что-то не так — вернём деньги.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">📞</div>
+                    <h3>Поддержка</h3>
+                    <p>Отвечаем в течение часа в рабочее время. Видео-инструкции в подарок.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title">Заказать бота</h2>
+                    <p>Заполните форму, и мы свяжемся с вами в течение часа</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span>📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p>hello@filmpal.bot</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span>📱</span>
+                            <div>
+                                <strong>Telegram</strong>
+                                <p>@filmpal_support</p>
+                            </div>
+                        </div>
+                        <div class="contact-item whatsapp-item">
+                            <span>💬</span>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <a href="https://wa.me/77712296056" target="_blank" class="whatsapp-link">+7 771 229 60 56</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span>⏰</span>
+                            <div>
+                                <strong>Время ответа</strong>
+                                <p>1 час в рабочее время</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя *</label>
+                        <input type="text" id="name" name="name" required placeholder="Иван">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-input">Telegram или Email *</label>
+                        <input type="text" id="contact-input" name="contact" required placeholder="@username или email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="package">Пакет</label>
+                        <select id="package" name="package">
+                            <option value="basic">Базовый — $200</option>
+                            <option value="premium" selected>Премиум — $350</option>
+                            <option value="business">Бизнес — $600</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Расскажите о проекте</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Опишите ваш канал/бизнес и что хотели бы получить"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
+                    <p class="form-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">🎬 FilmPal</div>
+                    <p>Умные Telegram-боты для вашего бизнеса</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Продукты</h4>
+                    <a href="#features">FilmPal Bot</a>
+                    <a href="#pricing">Цены</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Контакты</h4>
+                    <p>📧 hello@filmpal.bot</p>
+                    <p>📱 @filmpal_support</p>
+                    <p>💬 +7 771 229 60 56</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 FilmPal. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
